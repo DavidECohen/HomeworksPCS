@@ -1,0 +1,76 @@
+h1 {
+    text-align: center; color: yellow;
+    font-family: Verdana;
+    background-color: white;
+    
+} 
+
+body {
+    text-align: center;
+    
+}
+
+h2 {
+    border:4px solid goldenrod;
+     padding-top: 2px;
+    padding-bottom:2px;
+       font-family:  Calibri;
+       text-shadow: 2px 2px 2px black
+         
+}
+.desc{
+    font-style: italic;
+    border: 2px dashed goldenrod;
+   ;
+    width: 393px;
+    height: 90px;
+    overflow: auto;
+    margin-left: -2px;
+}
+    
+
+.pic {
+    float: left;
+    margin-right: 15px
+    
+}
+#top , #menu{
+    text-align:left;
+    letter-spacing: 2px;
+   
+}
+
+.menunames , .cost ,.info{
+    text-align:left 
+    
+    
+}
+ .info a{
+    text-decoration:none
+   }
+   .info a:visited{
+       color:greenyellow
+       }
+       .info a:link{
+           color:darkcyan
+       }
+       .cor{
+           background-color: greenyellow;
+           color:blue;
+           line-height:-12px
+       }
+h4{
+    color:black;
+    font-size: x-large;
+    font-family:  Haettenschweiler; 
+    border:4px solid goldenrod;
+     padding-top: 2px;
+    padding-bottom:2px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    background-color: tomato;
+}
+ul{text-align: left;
+    list-style-image: url("images/anchorLabel.png");
+        float:left
+}
