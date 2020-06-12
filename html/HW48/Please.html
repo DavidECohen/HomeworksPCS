@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Delius+Unicase:wght@700&family=Short+Stack&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
+    <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="images/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <link href="Design.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YummyBites</title>
+    <style>
+        body {
+            background-color: rgb(199, 18, 21)
+        }
+        
+        h5 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-bottom: 0px;
+        }
+        
+        button {
+            font-weight: bolder;
+            background-color: blue
+        }
+        
+        #thankYou {
+            color: greenyellow;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bolder;
+        }
+        
+        input {
+            border: 1px solid white;
+            margin-top: 18px;
+            margin-bottom: 0px;
+        }
+        
+        #dateline {
+            padding-left: 175px;
+            font-size: 12.5px
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+
+        <ul>
+            <li><a href="index.html ">Home</a> </li>
+            <li> <a href="Menu.html ">Menu</a> </li>
+            <li> <a href="AboutUs.html ">AboutUs</a> </li>
+            <li> <a href="Corona.html ">COVID-19</a> </li>
+            <li> <a href="DailyDeals.html">DailyDeals</a> </li>
+
+        </ul>
+    </nav>
+
+
+    <h1 style=" text-align: center; ">YummyBites <br>
+        <img src="images/burgerimage.png " alt="sorry image unavailable"> &nbsp;
+        <img src="images/burgerimage.png " alt="sorry image unavailable"> &nbsp;
+        <img src="images/burgerimage.png " alt="sorry image unavailable">
+    </h1>
+    <form method="post" action="Survey.php">
+        <label for="FirstName"></label><input id="FirstName" name="FirstName" placeholder="First Name" required />
+        <label for="LastName"></label><input id="LastName" name="LastName" placeholder="Last Name" required/>
+        <div> <label for="email"></label><input type="email" id="email" name="email" placeholder="Email" required/>
+            <label for="dateVisited"></label><input type="date" id="dateVisited" name="dateVisited" value="dateVisited" required/> </div>
+        <div id="dateline">date of your visit</div>
+
+        <br>
+        <h5>How would you rate our customer service today:</h5>
+        <label for="rateUs"></label>
+        <input type="radio" id="rateUs" name="rateUs" value="Excellent" />Excellent
+        <input type="radio" id="rateUs" name="rateUs" value="Very Good" />Very Good
+        <input type="radio" id="rateUs" name="rateUs" value="Good" />Good
+        <input type="radio" id="rateUs" name="rateUs" value="Okay" />Okay
+        <input type="radio" id="rateUs" name="rateUs" value="Poor" />Poor
+        <h5>How would you rate our food:</h5>
+        <label for="rateUs "></label>
+        <input type="radio" id="rateUs" name="rateUs" value="Excellent" />Excellent
+        <input type="radio" id="rateUs" name="rateUs" value="Very Good" />Very Good
+        <input type="radio" id="rateUs" name="rateUs" value="Good" />Good
+        <input type="radio" id="rateUs" name="rateUs" value="Okay" />Okay
+        <input type="radio" id="rateUs" name="rateUs" value="Poor" />Poor
+        <br>
+        <br>
+        <div> Comments and Suggestions: </div><label for="comments"></label><textarea id="comments" name="comments" placeholder="your comments" minlength="3"></textarea>
+        </div>
+        <div id=thankYou>Thanks for taking the time to fill out this survey. We hope it will allow us to continue to enhance our service and products.</div>
+        <div><button>SUBMIT</button>
+        </div>
+    </form>
+</body>
+
+</html>
