@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>estuff</title>
+    <style>
+        @media screen and (min-width:1000px) {
+            body {
+                font-family: Helvetica, Arial, sans-serif;
+                display: grid;
+                grid-template-columns: repeat(12, 1fr);
+                grid-auto-rows: 40px;
+            }
+            footer {
+                display: grid;
+                grid-template-columns: repeat(12, 1fr);
+                grid-auto-rows: 40px;
+                color: white;
+                background-color: black;
+                width: 100%;
+                position: fixed;
+                bottom: 0px;
+                left: 0px;
+                line-height: 50px;
+            }
+            nav {
+                display: grid;
+                grid-template-columns: repeat(12, 1fr);
+                grid-auto-rows: 40px;
+                border-style: solid;
+                width: 100%;
+                background-color: black;
+                position: fixed;
+                top: 0px;
+                left: 0px;
+            }
+            a {
+                text-decoration: none;
+                color: white;
+                margin: 10px;
+            }
+            a:hover {
+                color: red;
+                text-decoration: underline;
+                text-decoration-color: red;
+            }
+            li {
+                border-style: solid;
+                background-color: black;
+                align-content: center;
+            }
+            ul {
+                list-style-type: none;
+                display: inline-flex;
+            }
+            .link,
+            .foot {
+                grid-column-start: 3;
+            }
+            header {
+                grid-column-start: 3;
+                grid-column-end: 11;
+                grid-row-start: 1;
+                grid-row-end: 5;
+                text-align: center;
+                background-color: lightgray;
+                border-bottom-right-radius: 13px;
+                border-bottom-left-radius: 13px;
+            }
+            h1 {
+                text-transform: uppercase
+            }
+            h3 {
+                font-style: italic;
+            }
+            .producttop {
+                font-weight: bold;
+                font-size: large;
+                grid-row: 6;
+                grid-column-start: 3;
+                grid-column-end: 11;
+            }
+            h5 {
+                grid-row: 7;
+                grid-column-start: 3;
+                grid-column-end: 11;
+                font-weight: lighter;
+            }
+            table {
+                grid-row-start: 8;
+                grid-column-start: 3;
+                grid-column-end: 11;
+                border-collapse: seperate;
+                border-spacing: 10px 0px;
+            }
+            img,
+            video {
+                max-width: 100%;
+                height: auto
+            }
+            .midRow {
+                /* width: 100%; 
+            for smaller screen*/
+                border: none
+            }
+            .topRow {
+                margin-right: 10px;
+                text-align: center;
+            }
+            .nobold {
+                font-weight: lighter!important;
+            }
+            .nobold,
+            .row3,
+            .line3,
+            .line2,
+            .line1 {
+                border: none!important
+            }
+            .line1,
+            .line2,
+            .line3 {
+                border-right: 1px solid black!important;
+                border-left: 1px solid black!important;
+                padding: 10px!important
+            }
+            .row1 {
+                border: none!important
+            }
+            #SignUp {
+                grid-column-start: 3;
+                grid-column-end: 11;
+                grid-row-start: 18;
+                grid-row-end: 22;
+                background-color: lightgray;
+                border-radius: 13px;
+                display: inline-flex;
+            }
+            .sign {
+                display: block;
+                justify-content: center
+            }
+            div {
+                display: inline-flex;
+                justify-content: center
+            }
+            form {
+                grid-column-start: 3;
+                grid-column-end: 11;
+                grid-row-start: 18;
+                grid-row-end: 22;
+                text-align: center;
+                align-content: center;
+            }
+            input {
+                border-radius: 4px;
+                box-shadow: 5px 5px 5px black;
+            }
+            button {
+                border-radius: 2px;
+            }
+            th {
+                text-align: center;
+            }
+            #Fin {
+                font-weight: bold;
+                font-size: large;
+                grid-column-start: 3;
+                grid-column-end: 11;
+                grid-row: 23;
+            }
+            .Fin2 {
+                grid-row-start: 24;
+            }
+            caption {
+                margin: auto;
+                font-weight: bold
+            }
+            .fintab {
+                align-self: center;
+                display: block;
+                overflow: auto;
+                margin: auto;
+                text-align: right;
+                table-layout: fixed;
+                border-collapse: collapse;
+                grid-column-start: 4;
+                grid-column-end: 10;
+                grid-row-start: 27;
+                grid-row-end: 30;
+                width: 120%
+            }
+            .finrows:nth-child(even) {
+                background-color: lightblue;
+            }
+            td:nth-child(1) {
+                font-weight: bold
+            }
+            td,
+            th {
+                border: 1px solid black;
+                table-layout: auto;
+            }
+            .total {
+                color: red;
+            }
+            td {
+                justify-content: right;
+            }
+            .finrows:hover {
+                background-color: blue!important
+            }
+            .hoverlast:hover {
+                background-color: blue!important
+            }
+            .longspan {
+                justify-content: end;
+            }
+            #About {
+                grid-row-start: 32;
+                font-weight: bold;
+                font-size: large;
+                grid-column-start: 3;
+                grid-column-end: 11;
+            }
+            .About2 {
+                grid-row-start: 33;
+                grid-row-end: 53;
+            }
+        }
+        
+        @media screen and (max-width:999px) {
+            body {
+                font-family: Helvetica, Arial, sans-serif;
+                display: grid;
+                grid-template-columns: repeat(12, 1fr);
+                grid-auto-rows: 40px;
+            }
+            footer {
+                display: grid;
+                grid-template-columns: repeat(12, 1fr);
+                grid-auto-rows: 40px;
+                color: white;
+                background-color: black;
+                width: 100%;
+                position: fixed;
+                bottom: 0px;
+                left: 0px;
+                line-height: 50px;
+            }
+            nav {
+                display: grid;
+                grid-template-columns: repeat(12, 1fr);
+                grid-auto-rows: 40px;
+                border-style: solid;
+                width: 100%;
+                background-color: black;
+                position: fixed;
+                top: 0px;
+                left: 0px;
+            }
+            a {
+                text-decoration: none;
+                color: white;
+                margin: 10px;
+            }
+            a:hover {
+                color: red;
+                text-decoration: underline;
+                text-decoration-color: red;
+            }
+            li {
+                border-style: solid;
+                background-color: black;
+                align-content: center;
+            }
+            ul {
+                list-style-type: none;
+                display: inline-flex;
+            }
+            .link,
+            .foot {
+                grid-column-start: 3;
+            }
+            header {
+                grid-column-start: 3;
+                grid-column-end: 11;
+                grid-row-start: 1;
+                grid-row-end: 5;
+                text-align: center;
+                background-color: lightgray;
+                border-bottom-right-radius: 13px;
+                border-bottom-left-radius: 13px;
+            }
+            h1 {
+                text-transform: uppercase
+            }
+            h3 {
+                font-style: italic;
+            }
+            .producttop {
+                font-weight: bold;
+                font-size: large;
+                grid-row: 6;
+                grid-column-start: 3;
+                grid-column-end: 11;
+            }
+            h5 {
+                grid-row: 7;
+                grid-column-start: 3;
+                grid-column-end: 11;
+                font-weight: lighter;
+            }
+            #Products,
+            .prod,
+            .row1,
+            .line1,
+            .midRow,
+            .line2,
+            .nobold,
+            .line3 {
+                display: block;
+                text-align: left;
+            }
+            .row,
+            .toprow {
+                width: 100%;
+                display: block;
+                text-align: left;
+            }
+            table {
+                width: 100%;
+                display: block;
+                grid-row-start: 8;
+                grid-column-start: 3;
+                grid-column-end: 11;
+                flex-direction: column;
+            }
+            img,
+            video {
+                display: block;
+                width: 100%;
+            }
+            .row1,
+            .line1 {
+                text-align: center;
+            }
+            .midRow {
+                /* width: 100%; 
+            for smaller screen*/
+                border: none
+            }
+            .topRow {
+                margin-right: 10px;
+                text-align: center;
+            }
+            .nobold {
+                width: 100%;
+                display: block;
+                font-weight: lighter!important;
+            }
+            .nobold,
+            .row3,
+            .line3,
+            .line2,
+            .line1 {
+                border: none!important;
+            }
+            /* .line1,
+            .line2,
+            .line3 {
+                border-right: 1px solid black!important;
+                border-left: 1px solid black!important;
+                padding: 10px!important} */
+            .row1 {
+                border: none!important
+            }
+            #SignUp {
+                grid-column-start: 3;
+                grid-column-end: 11;
+                grid-row-start: 38;
+                grid-row-end: 43;
+                background-color: lightgray;
+                border-radius: 13px;
+            }
+            div {
+                display: block
+            }
+            form {
+                display: block;
+                grid-column-start: 3;
+                grid-column-end: 11;
+                grid-row-start: 39;
+                grid-row-end: 42;
+                text-align: center;
+                align-content: center;
+                margin: auto;
+            }
+            input {
+                margin: auto;
+                /* display: block; */
+                border-radius: 4px;
+                box-shadow: 5px 5px 5px black;
+            }
+            button {
+                border-radius: 2px;
+            }
+            th {
+                text-align: center;
+            }
+            #Fin {
+                font-weight: bold;
+                font-size: large;
+                grid-column-start: 3;
+                grid-column-end: 11;
+                grid-row-start: 43;
+            }
+            .Fin2 {
+                grid-row-start: 44;
+            }
+            caption {
+                margin: auto;
+                font-weight: bold
+            }
+            .fintab {
+                align-self: center;
+                display: block;
+                overflow: auto;
+                margin: auto;
+                text-align: right;
+                table-layout: fixed;
+                border-collapse: collapse;
+                grid-column-start: 4;
+                grid-column-end: 10;
+                grid-row-start: 45;
+                grid-row-end: 48;
+                width: 120%
+            }
+            .finrows:nth-child(even) {
+                background-color: lightblue;
+            }
+            td:nth-child(1) {
+                font-weight: bold
+            }
+            td,
+            th {
+                border: 1px solid black;
+                table-layout: auto;
+            }
+            .total {
+                color: red;
+            }
+            td {
+                justify-content: right;
+            }
+            .finrows:hover {
+                background-color: blue!important
+            }
+            .hoverlast:hover {
+                background-color: blue!important
+            }
+            .longspan {
+                justify-content: end;
+            }
+            #About {
+                grid-row-start: 51;
+                font-weight: bold;
+                font-size: large;
+                grid-column-start: 3;
+                grid-column-end: 11;
+            }
+            .About2 {
+                grid-row-start: 52;
+                grid-row-end: 73;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul class="link">
+            <li><a href="#Products">Products</a></li>
+            <li><a href="#SignUp ">SignUp</a></li>
+            <li><a href="#Fin ">Financials</a></li>
+            <li><a href="#About">AboutUs</a></li>
+        </ul>
+    </nav>
+    <header>
+        <br>
+        <h1>estuff</h1>
+        <h3>a PCS Company</h3>
+    </header>
+    <h4 class="producttop">Products</h4>
+    <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam cum incidunt natus, illo voluptatem eligendi? </h5>
+    <table id="Products">
+        <tbody class="prod">
+            <tr class="topRow">
+                <td class="row1">
+                    <h4>Computers</h4>
+                </td>
+                <td class="line1">
+                    <h4>Choir</h4>
+                </td>
+                <td class="row1">
+                    <h4>Candy</h4>
+                </td>
+            </tr class="row">
+            <tr>
+                <td class="midRow "><img src="images/macworld.jpg " alt="sorry image unavailable "></td>
+                <td class="line2 "><video src="media/El Hanaar Hazeh.mp4 " controls pre-load="metadata " poster="images/shira.png "></video></td>
+                <td class="midRow "><img src="images/candy.png " alt="sorry image unavailable " class="candy "></td>
+            </tr>
+            <tr class="row">
+                <td class="nobold ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex non nihil, tempora pariatur quis, quidem, facilis consectetur eos velit officiis aliquid quod ab amet alias?</td>
+                <td class="line3 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex non nihil, tempora pariatur quis, quidem, facilis consectetur eos velit officiis aliquid quod ab amet alias?</td>
+                <td class="nobold ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex non nihil, tempora pariatur quis, quidem, facilis consectetur eos velit officiis aliquid quod ab amet alias?</td>
+            </tr>
+        </tbody>
+    </table>
+    <div id="SignUp">
+        <form method="post " action="Sign-up.php">
+            <div class="sign">
+                <h4>Sign Me Up! </h4>
+            </div>
+            <div><label for="Name">
+                </label>Name: <input id="Name " name="Name " placeholder=" Name " required /></div>
+
+            <div><label for="Email "></label>Email:<input type="email" id="Email " name="Email " placeholder="Email " required/></div>
+            <div><button>Sign Me Up</button>
+            </div>
+        </form>
+    </div>
+    </div>
+    <h4 id="Fin">Financials</h4>
+    <h5 class="Fin2 ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque excepturi autem voluptas rem! </h5>
+    <table class="fintab ">
+        <caption>
+            <h4>Profits-By Quarter</h4>
+        </caption>
+        <tbody>
+            <tr class="finrows ">
+                <th>Year </th>
+                <th>1st Quarter Profits</th>
+                <th>2nd Quarter Profits </th>
+                <th>3rd Quarter Profits </th>
+                <th>4th Quarter Profits </th>
+                <th>Total </th>
+            </tr>
+            <tr class="finrows ">
+                <td>2012</td>
+                <td>$76587658</td>
+                <td>$65765876</td>
+                <td>$65765876</td>
+                <td>$65765876</td>
+                <td class="total ">$65765876</td>
+            </tr>
+            <tr class="finrows ">
+                <td>2013</td>
+                <td>$65765876</td>
+                <td>$65765876</td>
+                <td>$65765876</td>
+                <td>$65765876</td>
+                <td class="total ">$65765876</td>
+            </tr>
+            <tr class="finrows ">
+                <td>2014</td>
+                <td>$65765876</td>
+                <td>$65765876</td>
+                <td>$65765876</td>
+                <td>$65765876</td>
+                <td class="total ">$65765876</td>
+            </tr>
+            <tr class="finrows ">
+                <td>2015</td>
+                <td>$65765876</td>
+                <td>$65765876</td>
+                <td>NA</td>
+                <td>NA</td>
+                <td class="total ">$65765876</td>
+            </tr>
+            <tr class="hoverlast ">
+                <tf class="finrows ">
+                    <td class="longspan " colspan=" 5 ">Total </td>
+                    <td class="total ">$265765876</td>
+                </tf>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+    <h4 id="About">About Us</h4>
+    <h5 class="About2 ">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque placeat corporis excepturi voluptatibus. Consequatur, quae nulla eligendi consectetur ducimus ab atque sapiente quod similique voluptate, officia nihil cumque! Praesentium quidem
+        expedita iusto perferendis autem aspernatur explicabo odit architecto reprehenderit accusantium. Repellendus quasi modi quibusdam! Quae laboriosam exercitationem excepturi quibusdam nobis iure tempore at labore aliquid, reiciendis quod quaerat
+        nihil laudantium maiores! Accusantium illo quo accusamus distinctio eum, nulla et praesentium aut pariatur iure facilis voluptates deleniti labore porro ut autem! Nesciunt aperiam, ducimus ipsa tempora aliquid quibusdam, quo qui, error eos illum
+        dolor sequi. Nam rem maiores cum nihil voluptatem voluptatibus perferendis, velit quas necessitatibus aut. Qui ab dolore modi, quam minus dicta ipsam harum quos temporibus obcaecati sint? Asperiores commodi unde saepe voluptatum explicabo facere
+        ducimus fuga alias ad quo ut reprehenderit ullam dolorem quod, quibusdam magni atque blanditiis, amet possimus. Provident molestiae, amet cumque a at, quas neque modi nihil voluptatem esse iure soluta officiis nesciunt expedita dolorem doloribus
+        in sit hic incidunt blanditiis tempora libero possimus veritatis dolorum. Deserunt inventore sed doloribus officiis assumenda incidunt est, nihil laboriosam excepturi, consequuntur impedit facere praesentium maiores quo accusamus. Dolor atque
+        delectus omnis aut natus adipisci placeat perspiciatis, ad tempora et! Ipsam, voluptatum, nam quasi possimus esse quia repellat odio accusantium voluptate nobis accusamus praesentium rerum! Inventore pariatur iure quod temporibus ad neque esse
+        in cupiditate similique tenetur! Provident quam tempora ullam dolor nam delectus, veritatis quasi reiciendis quos! Laudantium ullam repellendus suscipit et. Similique consequatur, magnam corrupti facilis aperiam laudantium voluptates a magni laborum
+        maiores, maxime, eaque pariatur deleniti quos? Eligendi necessitatibus voluptatem non, possimus, iure dolorem quis doloremque nulla expedita nobis dolores consectetur magnam amet architecto. Magni eveniet omnis, eaque explicabo doloremque distinctio
+        fugiat aliquam est quam vitae nesciunt nobis temporibus officiis amet voluptas debitis in architecto nam commodi enim dolorum soluta nihil incidunt quasi. Officia quis illum, inventore tenetur explicabo sapiente tempora doloremque nostrum dolores
+        nemo officiis enim iusto voluptas alias error iure provident dolorum corporis totam. Reprehenderit facere inventore itaque voluptatibus autem fuga nobis harum ut et sit, eligendi fugiat dicta nihil ipsum voluptatem assumenda debitis corrupti similique
+        quae nam soluta cupiditate doloremque odio! Maxime sequi rem quaerat veniam ratione cum blanditiis amet atque libero, recusandae suscipit animi quis magni reiciendis a numquam ea voluptate earum, ipsam molestiae magnam repudiandae vel quisquam
+        sint! Rem ducimus facilis velit? Nostrum, nihil deserunt dolor reprehenderit facilis, fuga nisi veritatis voluptatibus enim corrupti amet. Exercitationem accusantium minus alias rerum? Delectus nemo magnam accusantium expedita voluptas magni.
+        Sed, vitae iste dicta nostrum distinctio debitis enim harum, beatae veniam voluptatibus quisquam eveniet, assumenda optio! Veniam at repellendus dicta velit illo! Fugit et voluptatibus ullam nostrum corrupti temporibus quas laudantium doloremque
+        delectus, vero beatae perferendis nesciunt quis iste voluptate rem blanditiis accusantium obcaecati, reprehenderit ut a quidem maxime voluptatum possimus. Ex dicta cum nobis dolorum tempora iure rerum similique enim sapiente, quo magni fuga earum
+        fugit ipsum sint quae suscipit voluptatibus molestiae sed repellendus illo? Iure a vitae, consequuntur sint exercitationem iusto porro!Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet cum mollitia natus. Reiciendis odio error expedita
+        ipsam delectus est sapiente, sed inventore culpa magnam vero ratione aspernatur maxime. Delectus consequuntur sapiente voluptate porro natus hic modi, alias incidunt id, est odio quidem explicabo nesciunt, adipisci labore facilis. Quo iusto laboriosam
+        beatae alias minus eaque doloremque eum vitae cum voluptatibus perspiciatis, vero dignissimos ex? Molestiae consequatur cumque, aliquid earum explicabo quis officiis repellat dignissimos totam asperiores? Laudantium porro dolores reprehenderit
+        debitis maiores natus, voluptatem fuga sint veniam? Nisi, et accusamus! Quasi optio commodi incidunt corrupti aut debitis autem veniam officiis qui ea, in quae ab, eaque neque impedit nam perspiciatis consequatur. Fugiat incidunt est quia earum
+        beatae nemo assumenda vitae voluptatum obcaecati impedit vero exercitationem a accusantium, accusamus nulla ipsa mollitia harum? Nihil cum labore ab vero sint dicta at soluta, reiciendis adipisci est sit, sapiente, culpa iste! Ut, adipisci eum.
+        Eligendi, et! Dolore optio, perferendis atque quasi praesentium iure repudiandae accusantium pariatur deserunt? Esse molestias optio quia exercitationem nemo magni sit asperiores. Nisi deleniti illo voluptas dolores dolorum sapiente consequatur
+        magni harum ipsum atque, a obcaecati magnam culpa rem qui? Porro sapiente tenetur obcaecati, modi odio aspernatur ratione eaque voluptatum excepturi recusandae facilis distinctio culpa fuga quis maiores, praesentium soluta accusamus? Officia incidunt
+        eos ad at vero veniam, tempore omnis cumque ut dolorem corrupti neque, in esse illum velit. Odit corrupti impedit tempore vero deleniti necessitatibus vitae blanditiis aliquid non. Nulla, laborum? Atque aperiam aut nesciunt assumenda a quam harum,
+        nisi porro explicabo sit molestiae blanditiis velit ab quos accusamus voluptas voluptate commodi quidem fuga! Eaque excepturi neque quas itaque, perspiciatis architecto repudiandae dolore velit obcaecati nam numquam eius sed ut labore iste illum
+        voluptas recusandae quos ipsam laborum ipsum. Quas, dolores id! Odit dolorem error suscipit quos quod, esse nobis est quam dignissimos facilis voluptatem ea nostrum excepturi sit tempora, commodi veniam consequuntur, cum neque dicta quis nisi
+        alias.
+    </h5>
+
+
+    <footer>
+        <div class="foot ">&copy PCS 2020 </div>
+    </footer>
+</body>
+
+</html>
