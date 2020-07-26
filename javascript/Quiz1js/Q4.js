@@ -1,0 +1,17 @@
+window.app.add();
+window.app.add();
+window.app.add();
+window.app.add();
+window.app.add();
+window.app.add();
+window.app.add();
+window.app.add();
+window.app.add();
+window.app.add();
+console.log(window.app.add());
+abc.do();
+window.app.abc.add();
+window.app.abc.add();
+window.app.abc.add();
+window.app.abc.add();
+console.log(window.app.abc.do());
