@@ -1,3 +1,5 @@
+// SL - I dont see you using this file in Q1.html so I guess its not used? Not sure what its ment to be doing
+// also I get 16 jslint warnings/errors...
 window.app.utils = (function(utils) {
     'use strict';
     //const savings = createIncrementer;
