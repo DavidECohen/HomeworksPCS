@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html,
+        body,
+        #map,
+        #pano {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+        
+        body {
+            background-color: green;
+        }
+        
+        #map,
+        #pano {
+            width: 850%;
+            float: left;
+        }
+        
+        #div {
+            width: 50%;
+            height: 75%;
+            border: thick double #32a1ce;
+            margin-left: 500px;
+        }
+        
+        #ibox {
+            font-size: large;
+            display: inline-block
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div">
+    </div>
+    <div id="ibox">
+        <label id="box">Choose Location:</label>
+        <input type="text" id="userChoice">
+        <button id="button">Find It!</button>
+
+
+        <div id="map"></div>
+        <div id="pano"></div>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgo5zRY_RbYmBqpfGXjO4qkjNPVAQ_m7g&callback=initMap" defer></script>
+        <script src="hw69a.js"></script>
+</body>
+
+</html>
