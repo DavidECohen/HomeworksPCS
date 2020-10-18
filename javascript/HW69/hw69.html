@@ -7,13 +7,18 @@
     <title>Document</title>
 
     <style>
-        html,
-        body,
         #map,
         #pano {
             width: 100%;
             height: 100%;
             margin: 0;
+        }
+        
+        #grid-container {
+            height: 500px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
         }
         
         body {
@@ -27,34 +32,57 @@
         }
         
         #div {
-            width: 50%;
-            height: 75%;
+            width: 100%;
+            height: 100%;
             border: thick double #32a1ce;
-            margin-left: 500px;
+            /* margin-left: 500px; */
         }
         
         #ibox {
+            float: right;
             font-size: large;
-            display: inline-block
+            /* display: inline-block */
+        }
+        
+        div.ul {
+            font-size: small;
         }
     </style>
 </head>
 
 <body>
-    <div id="div">
+    <div id="grid-container">
+        <div id="div"></div>
+
+        <div id="ibox">
+            <label id="box">Choose Location:</label>
+            <input type="text" id="userChoice">
+            <button id="button">Find It!</button>
+            <br>
+            <br>
+            <br> places you've recently "visited":
+            <br>
+            <div></div>
+            <ul id="list">
+                <!-- <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li> -->
+
+            </ul>
+            <div id="map"></div>
+            <div id="pano"></div>
+            <ul>
+                <li></li>
+
+            </ul>
+        </div>
     </div>
-    <div id="ibox">
-        <label id="box">Choose Location:</label>
-        <input type="text" id="userChoice">
-        <button id="button">Find It!</button>
 
-
-        <div id="map"></div>
-        <div id="pano"></div>
-
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgo5zRY_RbYmBqpfGXjO4qkjNPVAQ_m7g&callback=initMap" defer></script>
-        <script src="hw69a.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgo5zRY_RbYmBqpfGXjO4qkjNPVAQ_m7g&callback=initMap" defer></script>
+    <script src="hw69a.js"></script>
 </body>
 
 </html>

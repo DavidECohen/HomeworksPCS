@@ -6,6 +6,7 @@ function initMap() {
     const anotherLoc = { lat: 40.1, lng: -74.23 };
     let userInput = $('#userChoice');
     const button = $('#button');
+    let list = $('#list');
     let loc;
     // let marker;
     // const div = $('#div');
@@ -29,12 +30,14 @@ function initMap() {
                         lat: location.geonames[index].lat,
                         lng: location.geonames[index].lng
                     };
+                    let photo = location.geonames[index].thumbnailImg;
                     let summ = location.geonames[index].summary;
                     let wiki = location.geonames[index].wikipediaUrl;
                     let title = location.geonames[index].title;
-                    //const tt = summ + 'read more' + wiki;
-                    let y = (summ + '<a href="' + wiki + '">' + "read more" + '< /a>');
-                    // $('<a href="' + desiredLink + '">' + desiredText + '</a>')
+                    let visited = title + photo;
+
+                    let info = (summ + '<a href="http://' + wiki + '">' + "read more");
+
                     const createMarker = new google.maps.Marker({
                         position: loc,
                         map: map,
@@ -46,9 +49,11 @@ function initMap() {
                         }
 
                     });
+                    //list.attr('src', photo);
+                    list.append(title);
                     const infoWindow = new google.maps.InfoWindow();
                     createMarker.addListener('click', () => {
-                        infoWindow.setContent(y);
+                        infoWindow.setContent(info);
                         // infoWindow.setContent(wiki);
                         infoWindow.open(map, createMarker);
                     });
