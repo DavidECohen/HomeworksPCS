@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    img {
+        float: right
+    }
+    /*  width: 50%;
+        height: 70%; 
+        margin-left: 35% */
+    
+    menu {
+        width: 15%;
+    }
+    
+    table,
+    td {
+        width: 20%;
+        border: 1px solid black;
+        border-collapse: collapse;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        /* float: left */
+    }
+    
+    td.img {
+        width: 165px;
+        height: 165 px;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+    
+    body {
+        background: orange
+    }
+    
+    .row1 {
+        /* display: inline-grid; */
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1/span 4
+    }
+    
+    .row2 {
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 1/span 4
+    }
+</style>
+
+<body>
+    <div id="p-body"> <img src="images/head.png" width="45%" height="60%">
+
+        <div class="grid-container">
+            <div class="row1">
+                <div class="grid-item"><img src="images/bowtie.png"> </div>
+                <div class="grid-item"><img src="images/stash.png"></div>
+                <div class="grid-item"><img src="images/mouth.png"></div>
+            </div>
+            <div class="row2">
+                <div class="grid-item"><img src="images/cap.png"></div>
+                <div class="grid-item"><img src="images/earRight.png"></div>
+                <div class="grid-item"><img src="images/earLeft.png"></div>
+            </div>
+            <div class="grid-item"><img src="images/eyes.png"></div>
+            <div class="grid-item"><img src="images/shoes.png"></div>
+            <div class="grid-item"><img src="images/nose.png"></div>
+        </div>
+        <!-- <table id="menu">LET'S GET BUILDING...
+            <tr>
+                <td><img src="images/bowtie.png"></td>
+                <td><img src="images/stash.png"></td>
+                <td><img src="images/mouth.png"></td>
+            </tr>
+            <tr>
+                <td><img src="images/cap.png"></td>
+                <td><img src="images/eyes.png"></td>
+                <td><img src="images/earLeft.png"></td>
+            </tr>
+            <tr>
+                <td><img src="images/earRight.png"></td>
+                <td><img src="images/shoes.png"></td>
+                <td><img src="images/nose.png"></td>
+
+            </tr>
+
+            </table> -->
+    </div>
+    <!-- <div id="p-body"> <img src="images/head.png">
+    </div> -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="hw71.js"></script>
+
+</body>
+
+</html>
