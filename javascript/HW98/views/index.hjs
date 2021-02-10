@@ -1,0 +1,13 @@
+
+
+
+
+<ul>  
+  {{#names}}
+  <li>{{firstname}}    {{lastname}}    {{phone}}</li>
+   {{!-- <li></li>
+    <li></li> --}}
+   
+  
+  {{/names}}
+</ul>
