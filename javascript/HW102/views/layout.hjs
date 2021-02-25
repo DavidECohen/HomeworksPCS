@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>{{ title }}</title>
+    <link rel='stylesheet'  href='/stylesheets/style.css' />
+    <style>
+     
+    </style>
+  </head>
+
+  <body>
+    <h1>{{ title }}</h1>
+<h3>you were here:{{increment}} times</h3>
+     <form  method='POST'>
+    
+ <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname">
+{{!-- <input type="submit" value="go"> --}}
+   <a href="/name">go</a>
+    </form> 
+
+   
+    {{>content}}
+  </body>
+
+</html>
