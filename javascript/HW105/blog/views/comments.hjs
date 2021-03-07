@@ -1,0 +1,9 @@
+<link href="/css/addPost.css" rel="stylesheet">
+<form method="POST">
+ 
+  <label>Your comment:
+    <textarea name="comment2"></textarea>
+  </label>
+  <div>id:</div>
+  <button>add</button>
+</form>
