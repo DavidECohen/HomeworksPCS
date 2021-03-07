@@ -1,8 +1,10 @@
 {{#posts}}
-<div class="post" id={{_id}}>
+<div class="post" >
   <h2>{{title}}</h2>
   <h3>by {{author}} on {{date}}</h3>
   <div>{{body}}   </div>
+<div type="hidden" > {{_id}}</div>
+  </div>
    {{#postLinks}}
       <a href="{{url}}">{{name}}</a>
       {{/postLinks}}
@@ -10,7 +12,7 @@
   {{#comments}}
   
 
-<h3>by {{author}} said{{comment}}</h3>
+<h3>by {{author}} said: {{comment}}<hr></h3>
 
    {{/comments}}
 

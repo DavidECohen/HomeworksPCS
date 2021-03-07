@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
+var ObjectId = require('mongodb').ObjectID;
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hjs');
@@ -48,9 +49,10 @@ app.route('/addPost')
             body: req.body.body,
             date: new Date(),
             author: 'me',
+            id: req.body.id
 
         };
-
+        console.log(id);
         await posts.insertOne(post);
         res.redirect('/');
     });
@@ -61,7 +63,7 @@ app.route('/addcomment')
             subtitle: 'add comment',
             links: [{ url: '/', name: 'home' }],
             partials: { content: 'comments' },
-            //id: req.body.id
+            id: req.body.id
         });
     })
     .post(async(req, res, next) => {
@@ -72,8 +74,24 @@ app.route('/addcomment')
             author: 'you',
 
         };
+        posts.updateOne({
+            _id: ObjectId("604509686699e55de8263da9")
+        }, {
+            $push: {
+                comments: comment1
+            }
+        });
 
-        await posts.insertOne(comment1);
+
+
+
+
+        // await posts.updateOne({ _id: mongo.ObjectId("604509686699e55de8263da9") }, {
+        //     $push: {
+        //         comments: comment1
+        //     }
+        // });
+        // await posts.insertOne(comment1);
         res.redirect('/');
     });
 
